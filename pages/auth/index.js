@@ -7,7 +7,7 @@ const auth = () => {
     <Layout>
       <div>
         <div>
-          <p className={styles.text}>1dsfsdf222</p>
+          <p className={styles.text}>1dsfsdf</p>
         </div>
       </div>
     </Layout>
