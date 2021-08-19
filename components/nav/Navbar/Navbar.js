@@ -59,12 +59,13 @@ const Navbar = () => {
           <div className={styled.NavbarActive__nav}>
             {links.map((link) => {
               return (
-                <NavbarLink
-                  key={link.id}
-                  href={link.href}
-                  title={link.title}
-                  style={{ marginBottom: 16 }}
-                />
+                <span key={link.id}>
+                  <NavbarLink
+                    href={link.href}
+                    title={link.title}
+                    style={{ marginBottom: 16 }}
+                  />
+                </span>
               );
             })}
           </div>

@@ -34,7 +34,8 @@
 }
 
 .NavbarActive {
-  position: absolute;
+  position: fixed;
+  overflow-y: scroll;
   top: 0;
   bottom: 0;
   right: 0;
