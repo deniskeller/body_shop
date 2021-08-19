@@ -1,3 +1,9 @@
+const path = require('path');
+
 module.exports = {
   reactStrictMode: true,
-}
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'assets/scss')],
+    prependData: `@import "main.scss";`,
+  },
+};

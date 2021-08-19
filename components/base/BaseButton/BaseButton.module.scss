@@ -1,0 +1,44 @@
+//общие
+.Button {
+  min-width: 100%;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+//красная
+.Button_primary {
+  color: $white;
+  background: $red;
+}
+
+//белая
+.Button_default {
+  color: $green;
+  background: $white;
+}
+
+//404
+.Button_empty {
+  color: $white;
+  background: none;
+  border: 1px solid $white;
+}
+
+//зеленая
+.Button_secondary {
+  color: $white;
+  background: $green;
+}
+
+.Button_clear {
+  background: none;
+  color: $green;
+  height: auto;
+}

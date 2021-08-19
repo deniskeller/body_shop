@@ -1,0 +1,116 @@
+
+.Navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: em(40px) em(15px) 0;
+  position: relative;
+  z-index: 10;
+}
+
+.NavbarDefault, .NavbarActive {
+  width: 100%;
+}
+
+.Navbar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.Navbar__logoText {
+  margin-bottom: em(32px);
+}
+
+.Navbar__burger {
+  width: em(30px);
+  height: em(30px);
+  cursor: pointer;
+  position: absolute;
+  top: em(-3px);
+  right: 0;
+}
+
+.NavbarActive {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  background: $beige;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: em(40px);
+  padding-bottom: em(32px);
+}
+
+.NavbarActive__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.NavbarActive__burger {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: -3px;
+  right: 15px;
+}
+
+.NavbarActive__userinfo{
+  width: 100%;
+  text-align: center;
+  padding: 32px 0px;
+  background: $light_beige;
+  margin-bottom: 32px;
+}
+
+.NavbarActive__usermail {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  color: $green;
+  margin-bottom: 16px;
+}
+
+.NavbarActive__userplace {
+  font-size: 15px;
+  line-height: 120%;
+  color: $green;
+  margin-bottom: 8px;
+}
+
+.NavbarActive__userrecorde {
+  font-size: 15px;
+  line-height: 120%;
+  color: $turquoise;
+}
+
+.NavbarActive__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.NavbarActive__text {
+  font-size: 15px;
+  line-height: 120%;
+  text-align: center;
+  color: $turquoise;
+  margin-bottom: 16px;
+  &:last-child{
+    margin-bottom: 0px;
+  }
+}

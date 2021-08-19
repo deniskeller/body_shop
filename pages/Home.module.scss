@@ -1,0 +1,49 @@
+.MainContent {
+  // position: relative;
+}
+
+.Grapefruit{
+  position: absolute;
+  top: -25px;
+  left: -40px;
+  z-index: 0;
+}
+
+.Strawberry{
+  position: absolute;
+  top: -65px;
+  right: 10px;
+  z-index: 0;
+}
+
+.Leftgroup{
+  position: absolute;
+  bottom: -13px;
+  left: -70px;
+  z-index: 0;
+}
+
+.Rightgroup {
+  position: absolute;
+  bottom: -137px;
+  right: -95px;
+  z-index: 0;
+}
+
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.Record {
+  font-size: 15px;
+  line-height: 120%;
+  color: $turquoise;
+    span {
+      color: $black;
+    }
+}
