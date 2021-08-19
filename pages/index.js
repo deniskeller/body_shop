@@ -59,7 +59,7 @@ export default function Home() {
               Рекорд: <span>{recordValue}</span>
             </div>
           ) : (
-            <NavbarLink href='auth' title='Войти' />
+            <NavbarLink href='/auth' title='Войти' />
           )}
         </main>
       </div>

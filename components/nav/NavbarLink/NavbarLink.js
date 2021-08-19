@@ -4,7 +4,7 @@ import styles from './NavbarLink.module.scss';
 
 const NavbarLink = ({ href, title, style }) => {
   return (
-    <Link href={`/${href}`}>
+    <Link href={href}>
       <a className={styles.Link} style={{ ...style }}>
         {title}
       </a>

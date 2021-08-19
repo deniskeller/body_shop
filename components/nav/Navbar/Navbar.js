@@ -61,7 +61,7 @@ const Navbar = () => {
               return (
                 <NavbarLink
                   key={link.id}
-                  href={`/${link.href}`}
+                  href={link.href}
                   title={link.title}
                   style={{ marginBottom: 16 }}
                 />
