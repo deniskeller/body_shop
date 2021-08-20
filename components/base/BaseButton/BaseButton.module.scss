@@ -11,6 +11,9 @@
   border: none;
   cursor: pointer;
   border-radius: 100px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 //красная
@@ -39,7 +42,7 @@
 }
 
 .Button_clear {
-  // background: none;
+  background: none;
   color: $green;
   height: auto;
 }
