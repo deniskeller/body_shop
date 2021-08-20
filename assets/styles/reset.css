@@ -17,7 +17,7 @@ a {
 
 
 html {
-  /* font-size: calc(15px + 6 * ((100vw - 320px) / 680)); */
+  font-size: calc(15px + 6 * ((100vw - 320px) / 680));
   min-height: 100%;
   line-height: 1.8;
   font-family: 'Open Sans', sans-serif;

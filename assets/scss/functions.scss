@@ -1,4 +1,9 @@
 @use "sass:math";
+@function em($size, $base:15px) {
+  // $remSize: $size / $base;
+  $remSize: math.div($size, $base);
+  @return $remSize * 1em;
+}
 
 @function res($f-min, $f-max, $v-min: 320, $v-max: 1280) {
   $k: math.div(($f-max - $f-min),($v-max - $v-min));
@@ -16,3 +21,4 @@
   // width: calc(210px + (290 - 210) * ((100vw - 320px) / (1280 - 320)));
   @return calc($min + ($f-max — $f-min) * (math.div((100vw — $min),($v-max — $v-min))))
 }
+
