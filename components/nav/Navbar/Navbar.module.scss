@@ -104,7 +104,11 @@
   justify-content: center;
   flex-direction: column;
   span {
+    font-size: 0px;
     margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 40px;
+    }
   }
 }
 

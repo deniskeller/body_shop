@@ -10,6 +10,7 @@ const Navbar = () => {
     { id: 1, href: '/Coupons', title: 'Мои купоны' },
     { id: 2, href: '/Rating', title: 'рейтинг игроков' },
     { id: 3, href: '/About', title: 'Об игре' },
+    { id: 4, href: '/Auth', title: 'Выйти' },
   ];
   const [burgerActive, setBurgerActive] = React.useState(false);
 
@@ -65,9 +66,9 @@ const Navbar = () => {
               );
             })}
           </div>
-          <BaseButton type='clear' style={{ marginBottom: 58 }}>
+          {/* <BaseButton type='clear' style={{ marginBottom: 58 }}>
             Выйти
-          </BaseButton>
+          </BaseButton> */}
 
           <p className={styled.NavbarActive__text}>
             Политика обработки <br /> персональных данных
