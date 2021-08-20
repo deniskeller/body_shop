@@ -65,7 +65,7 @@ const Navbar = () => {
               );
             })}
           </div>
-          <BaseButton type='clear' style={{ marginBottom: 40 }}>
+          <BaseButton type='clear' style={{ marginBottom: 58 }}>
             Выйти
           </BaseButton>
 
