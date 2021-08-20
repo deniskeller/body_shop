@@ -3,33 +3,55 @@
 }
 
 .Grapefruit{
-  width: em(171px);
-  height: em(167px);
+  width: res(171, 271);
+  height: res(167, 267);
   position: absolute;
   top: -25px;
   left: -40px;
   z-index: 0;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .Strawberry{
+  width: res(167, 367);
+  height: res(198, 398);
   position: absolute;
-  top: -65px;
+  top: res(-65,-200);
   right: 10px;
   z-index: 0;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .Leftgroup{
+  width: res(228, 328);
+  height: res(423, 523);
   position: absolute;
   bottom: -13px;
   left: -70px;
   z-index: 0;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .Rightgroup {
+  width: res(243, 343);
+  height: res(437, 537);
   position: absolute;
   bottom: -137px;
   right: -95px;
   z-index: 0;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 

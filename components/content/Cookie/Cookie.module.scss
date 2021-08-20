@@ -13,8 +13,9 @@
 }
 
 .Cookie_text {
-  font-size: 10px;
-  line-height: 12px;
+  font-size: res(10, 14);
+  line-height: 120%;
   color: #F8F3E8;
   text-align: left;
+  margin-right: 16px;
 }

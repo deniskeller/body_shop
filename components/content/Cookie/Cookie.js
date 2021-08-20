@@ -12,7 +12,7 @@ const Cookie = ({ handlerCookie }) => {
       <BaseButton
         method={handlerCookie}
         type='default'
-        style={{ minWidth: 64 }}
+        style={{ maxWidth: 64 }}
       >
         ок
       </BaseButton>

@@ -3,6 +3,7 @@ import { BaseButton, NavbarLink } from '../..';
 import Burger from '../../../assets/img/Burger';
 import LogoImg from '../../../assets/img/LogoImg';
 import LogoText from '../../../assets/img/LogoText';
+import Link from 'next/link';
 import styled from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -70,9 +71,12 @@ const Navbar = () => {
             Выйти
           </BaseButton> */}
 
-          <p className={styled.NavbarActive__text}>
-            Политика обработки <br /> персональных данных
-          </p>
+          <Link href='/politics'>
+            <p className={styled.NavbarActive__text}>
+              Политика обработки <br /> персональных данных
+            </p>
+          </Link>
+
           <p className={styled.NavbarActive__text}>
             © 2021. The Body Shop.
             <br /> Все права защищены.

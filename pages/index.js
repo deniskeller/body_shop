@@ -7,7 +7,7 @@ import {
   Layout,
   NavbarLink,
 } from '../components';
-import styles from './Home.module.scss';
+import styles from '../assets/styles/Home.module.scss';
 import Strawberry from '../assets/img/Strawberry';
 import Grapefruit from '../assets/img/Grapefruit';
 import Leftgroup from '../assets/img/Leftgroup';
