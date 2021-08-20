@@ -1,6 +1,5 @@
 //общие
 .Button {
-  // min-width: 100%;
   width: res(210, 290, 320, 1920);
   height: 40px;
   font-size: 15px;
@@ -44,5 +43,5 @@
 .Button_clear {
   background: none;
   color: $green;
-  height: auto;
+  height: 0px;
 }

@@ -60,11 +60,7 @@ const Navbar = () => {
             {links.map((link) => {
               return (
                 <span key={link.id}>
-                  <NavbarLink
-                    href={link.href}
-                    title={link.title}
-                    style={{ marginBottom: 16 }}
-                  />
+                  <NavbarLink href={link.href} title={link.title} />
                 </span>
               );
             })}

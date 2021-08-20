@@ -48,7 +48,6 @@ export default function Home() {
             Помоги котику собрать <br /> ингредиенты из новой коллекции <br />{' '}
             масел для тела «The Body Shop»
           </BaseSubtitle>
-          {/* minWidth: 210, */}
           <BaseButton style={{ marginBottom: 16 }}>Играть</BaseButton>
           {auth ? (
             <div className={styles.Record}>
