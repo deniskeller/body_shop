@@ -9,7 +9,11 @@ const Cookie = ({ handlerCookie }) => {
         Сайт использует файлы cookie. Продолжая пользоваться сайтом, ты
         соглашаешься на использование этих файлов.
       </div>
-      <BaseButton method={handlerCookie} type='emtpy' style={{ minWidth: 64 }}>
+      <BaseButton
+        method={handlerCookie}
+        type='default'
+        style={{ minWidth: 64 }}
+      >
         ок
       </BaseButton>
     </div>
