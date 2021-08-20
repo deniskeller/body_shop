@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './BaseSubtitle.module.scss';
 
-const BaseSubtitle = ({ subtitle, style }) => {
+const BaseSubtitle = ({ children, style }) => {
   return (
     <p className={styles.p} style={{ ...style }}>
-      {subtitle}
+      {children}
     </p>
   );
 };
