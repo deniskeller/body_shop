@@ -1,7 +1,6 @@
 .Politics {
   padding: 32px 15px 48px;
   font-size: 12px;
-  
 }
 
 .Politics__title {
@@ -12,8 +11,35 @@
   color: $green;
 }
 
-.Politics__text {
+.Politics__subtitle {
+  font-weight: 600;
+  font-size: res(11, 16);
+  line-height: 120%;
+  margin-bottom: 24px;
+  color: $green;
+}
+
+.Politics__p, .Politics__li {
   font-size: res(12, 16);
   line-height: 120%;
   color: $green;
+}
+
+.Politics__p {  
+  margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+   a {
+    color: $green;
+    font-weight: 600;
+   }
+}
+
+.Politics__li {
+  list-style: none;
+  margin-bottom: 8px;
+  &:last-child {
+    margin-bottom: 24px;
+  }
 }
