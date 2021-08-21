@@ -1,6 +1,7 @@
 export const background = {
   green: '#004236',
   beige: '#F8F3E8',
+  light_beige: '#FDFBF8',
   white: '#FFFFFF',
 };
 
