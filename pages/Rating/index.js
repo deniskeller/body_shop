@@ -5,6 +5,7 @@ import { background, colors } from '../../utils/global';
 import RatingTop from '../../assets/img/RatingTop';
 import RatingBottom from '../../assets/img/RatingBottom';
 import getAllUsers from '../../API/RatingServices';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 const mockUsers = [
   { user_id: 15, user_mail: 'keller@gmail.com', user_score: 1300 },
