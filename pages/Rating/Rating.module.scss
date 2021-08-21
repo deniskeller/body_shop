@@ -1,0 +1,26 @@
+.RatingTop, .RatingBottom {
+  position: absolute;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.RatingTop{
+  width: res(224, 324);
+  height: res(242, 342);
+  top: 0px;
+  left: 0px;  
+}
+
+.RatingBottom {
+  width: res(320, 420);
+  height: res(515, 615);
+  bottom: 0px;
+  right: 0px;
+}
+
+.Rating__users {
+  overflow: hidden;
+  overflow-y: scroll;
+}
