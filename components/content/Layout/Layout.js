@@ -1,9 +1,13 @@
 import React from 'react';
 import { Cookie, Navbar } from '../..';
+import { background } from '../../../utils/global';
 import styles from './Layout.module.scss';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, bg }) => {
+  console.log('bg: ', bg);
   const [isCookie, setIsCookie] = React.useState(false);
+
+  const [bgcolor, setBgcolor] = React.useState(background.beige);
 
   const showCookie = () => {
     setTimeout(() => {
@@ -19,9 +23,13 @@ const Layout = ({ children }) => {
     showCookie();
   }, []);
 
+  React.useEffect(() => {
+    setBgcolor(bg);
+  }, [bgcolor]);
+
   return (
     <>
-      <div className={styles.layout}>
+      <div className={styles.layout} style={{ background: `${bgcolor}` }}>
         <Navbar />
         <div>{children}</div>
         {isCookie && <Cookie handlerCookie={hiddenCookie} />}

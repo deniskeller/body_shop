@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './Politics.module.scss';
 import { Layout } from '../../components';
+import { background } from '../../utils/global';
 
 const Politics = () => {
   return (
-    <Layout>
+    <Layout bg={background.white}>
       <div className={styles.Politics}>
         <h1 className={styles.Politics__title}>
           Политика обработки персональных данных

@@ -1,14 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import { BaseButton, GreenLayout } from '../components';
+import { BaseButton, Layout } from '../components';
 import styles from '../assets/styles/Error.module.scss';
 import Cat404 from '../assets/img/404cat';
 import Leftimg404 from '../assets/img/404leftimg';
 import Rightimg404 from '../assets/img/404rightimg';
+import { background } from '../utils/global';
 
 const Error = () => {
   return (
-    <GreenLayout>
+    <Layout bg={background.green}>
       <div className={styles.Cat404}>
         <Cat404 />
       </div>
@@ -34,7 +35,7 @@ const Error = () => {
           </Link>
         </BaseButton>
       </div>
-    </GreenLayout>
+    </Layout>
   );
 };
 

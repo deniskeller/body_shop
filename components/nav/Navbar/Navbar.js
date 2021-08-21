@@ -71,7 +71,7 @@ const Navbar = () => {
             Выйти
           </BaseButton> */}
 
-          <Link href='/politics'>
+          <Link href='/Politics'>
             <p className={styled.NavbarActive__text}>
               Политика обработки <br /> персональных данных
             </p>
