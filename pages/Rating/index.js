@@ -4,33 +4,158 @@ import styles from './Rating.module.scss';
 import { background, colors } from '../../utils/global';
 import RatingTop from '../../assets/img/RatingTop';
 import RatingBottom from '../../assets/img/RatingBottom';
-import RatingServices from '../../API/RatingServices';
+import getAllUsers from '../../API/RatingServices';
 
-const users = [
-  { user_id: 1, user_mail: 'dentean@mail.ru', user_score: 1300 },
-  { user_id: 1, user_mail: 'dentean@mail.ru', user_score: 1300 },
+const mockUsers = [
+  { user_id: 15, user_mail: 'keller@gmail.com', user_score: 1300 },
+  { user_id: 7, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
+  { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
 ];
 
-const Rating = () => {
-  // const fetchUsers = async () => {
-  //   const [isLoading, setIsLoading] = React.useState(false);
-  //   const [error, setError] = React.useState('');
+const mockId = 7;
 
-  // try {
-  //   setIsLoading(true);
-  //   const response = await axios.get(
-  //     'https://jsonplaceholder.typicode.com/users'
-  //   );
-  //   console.log('response: ', response);
-  // } catch (e) {
-  //   setError(e.message);
-  // } finally {
-  //   setIsLoading(false);
-  // }
-  // };
+const Rating = () => {
+  const [users, setUsers] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [error, setError] = React.useState('');
+
+  const fetchUsers = async () => {
+    try {
+      setIsLoading(true);
+      const response = await getAllUsers();
+      const data = response.data;
+      setUsers(data);
+    } catch (e) {
+      setError('Что-то пошло не так...');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const computedColor = (index) => {
+    if (index <= 99) return colors.yellow;
+    return colors.white;
+  };
+
+  const computedVisibility = (id) => {
+    if (id === mockId) {
+      return 'block';
+    }
+    return 'none';
+  };
+
+  const hiddenMail = (mail) => {
+    const name = mail.split('@')[0];
+    const first = name.slice(0, 1);
+    const last = name.slice(-1);
+    const fullname = first + '•••' + last;
+    return fullname + '@' + mail.split('@')[1];
+  };
 
   React.useEffect(() => {
-    // fetchUsers();
+    fetchUsers();
   }, []);
 
   return (
@@ -44,17 +169,41 @@ const Rating = () => {
       <div className={styles.Rating}>
         <BaseTitle
           first_title='рейтинг'
-          style={{ color: colors.yellow, marginBottom: 24 }}
+          style={{ color: colors.yellow, marginBottom: 10 }}
         />
-        <ul className={styles.Rating__users}>
-          {users ? (
-            <p>Загрузка рейтинга...</p>
-          ) : (
-            users.map((user) => {
-              <li key={user.id} className={styles.Rating__user}></li>;
-            })
+
+        {error && <h1>{error}</h1>}
+
+        {isLoading && <p>Loading ...</p>}
+
+        <div className={styles.wrapper}>
+          {users && (
+            <ul className={styles.Rating_users}>
+              {mockUsers.map((user, index) => {
+                return (
+                  <li key={index} className={styles.Rating_user}>
+                    <div
+                      className={styles.Overlay}
+                      style={{ display: computedVisibility(user.user_id) }}
+                    ></div>
+                    <div
+                      style={{ color: computedColor(index) }}
+                      className={styles.Rating_usernumber}
+                    >
+                      {index + 1}
+                    </div>
+                    <div className={styles.Rating_usermail}>
+                      {hiddenMail(user.user_mail)}
+                    </div>
+                    <div className={styles.Rating_userscore}>
+                      {user.user_score}
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           )}
-        </ul>
+        </div>
       </div>
     </Layout>
   );

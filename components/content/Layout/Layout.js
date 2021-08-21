@@ -4,7 +4,6 @@ import { background } from '../../../utils/global';
 import styles from './Layout.module.scss';
 
 const Layout = ({ children, bg }) => {
-  console.log('bg: ', bg);
   const [isCookie, setIsCookie] = React.useState(false);
 
   const [bgcolor, setBgcolor] = React.useState(background.beige);
