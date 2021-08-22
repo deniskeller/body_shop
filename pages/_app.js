@@ -1,4 +1,5 @@
 import '../assets/styles/reset.css';
+import 'swiper/swiper.scss';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

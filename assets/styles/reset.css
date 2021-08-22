@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
+
 body {
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
@@ -21,4 +22,8 @@ a {
 html {
   min-height: 100%;
   line-height: 120%;
+}
+
+.swiper-container {
+  overflow: inherit !important;
 }

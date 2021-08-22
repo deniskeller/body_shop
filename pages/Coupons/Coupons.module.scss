@@ -13,16 +13,20 @@
 }
 
 .Coupons {
-  position: relative;
+  position: relative;  
+  margin-top: 42px;
+  padding-bottom: 53px;
+}
+
+.default {
   text-align: center;
   display: flex;
   justify-content: center;
-  margin-top: 42px;
 }
 
 .Coupons_item {
-  width: res(260, 360);
-  height: res(379, 479);
+  width: res(260, 960);
+  height: res(379, 500);
   background: $light_beige;
   border-radius: 30px;
   padding: 150px 0px 32px;
@@ -30,8 +34,9 @@
 }
 
 .Coupons_description {
-  font-size: res(15, 18);
+  font-size: res(15, 15);
   color: $turquoise;
+  text-align: center;
 }
 
 .Avocado, .Mango {
@@ -39,3 +44,4 @@
   top: -42px;
   left: calc(50% - 80px);
 }
+
