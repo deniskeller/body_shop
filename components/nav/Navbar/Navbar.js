@@ -1,7 +1,6 @@
 import React from 'react';
 import { BaseButton, NavbarLink } from '../..';
 import Burger from '../../../assets/img/Burger';
-import LogoImg from '../../../assets/img/LogoImg';
 import LogoText from '../../../assets/img/LogoText';
 import Link from 'next/link';
 import styled from './Navbar.module.scss';
@@ -22,9 +21,6 @@ const Navbar = () => {
           <div className={styled.Navbar__logo}>
             <div className={styled.Navbar__logoText}>
               <LogoText />
-            </div>
-            <div className={styled.Navbar__logoImg}>
-              <LogoImg />
             </div>
             <div
               className={styled.Navbar__burger}

@@ -1,14 +1,15 @@
-.BaseTitle {
+.BaseTitle_center {
   text-align: center;
-  margin-bottom: 8px;
 }
-.h1 {
-  font-size: res(30, 47);
+
+.BaseTitle_left {
+  text-align: left;
+}
+
+.BaseTitle {
+  font-size: res(24, 37);
   font-family: $font-DrukWideCy;
   text-transform: uppercase;
-  color: $black;
+  color: $green;
   line-height: 120%;
-  span {
-    font-size: res(24, 37);
-  }
 }

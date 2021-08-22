@@ -5,3 +5,4 @@ export { default as Layout } from './content/Layout/Layout';
 export { default as Cookie } from './content/Cookie/Cookie';
 export { default as Navbar } from './nav/Navbar/Navbar';
 export { default as NavbarLink } from './nav/NavbarLink/NavbarLink';
+export { default as QuestionItem } from './content/QuestionItem/QuestionItem';

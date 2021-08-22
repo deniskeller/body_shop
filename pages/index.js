@@ -12,6 +12,7 @@ import Strawberry from '../assets/img/Strawberry';
 import Grapefruit from '../assets/img/Grapefruit';
 import Leftgroup from '../assets/img/Leftgroup';
 import Rightgroup from '../assets/img/Rightgroup';
+import LogoImg from '../assets/img/LogoImg';
 
 export default function Home() {
   const [auth, setAuth] = React.useState(false);
@@ -43,7 +44,14 @@ export default function Home() {
         </Head>
 
         <main className={styles.Main}>
-          <BaseTitle first_title='Настроение' second_title='мягкости' />
+          <div className={styles.Main__logoImg}>
+            <LogoImg />
+          </div>
+          <BaseTitle style={{ marginBottom: 15 }}>
+            Настроение
+            <br />
+            <span className={styles.Main_largetitle}>мягкости</span>
+          </BaseTitle>
           <BaseSubtitle style={{ marginBottom: 24 }}>
             Помоги котику собрать <br /> ингредиенты из новой коллекции <br />{' '}
             масел для тела «The Body Shop»

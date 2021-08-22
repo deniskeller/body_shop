@@ -2,6 +2,7 @@ import React from 'react';
 import { BaseTitle, Layout } from '../../components';
 import styles from './Rating.module.scss';
 import { background, colors } from '../../utils/global';
+import hiddenMail from '../../utils/hiddenMail';
 import RatingTop from '../../assets/img/RatingTop';
 import RatingBottom from '../../assets/img/RatingBottom';
 import getAllUsers from '../../API/RatingServices';
@@ -146,14 +147,6 @@ const Rating = () => {
     return 'none';
   };
 
-  const hiddenMail = (mail) => {
-    const name = mail.split('@')[0];
-    const first = name.slice(0, 1);
-    const last = name.slice(-1);
-    const fullname = first + '•••' + last;
-    return fullname + '@' + mail.split('@')[1];
-  };
-
   React.useEffect(() => {
     fetchUsers();
   }, []);
@@ -167,10 +160,9 @@ const Rating = () => {
         <RatingBottom />
       </div>
       <div className={styles.Rating}>
-        <BaseTitle
-          first_title='рейтинг'
-          style={{ color: colors.yellow, marginBottom: 10 }}
-        />
+        <BaseTitle style={{ color: colors.yellow, marginBottom: 10 }}>
+          рейтинг
+        </BaseTitle>
 
         {error && <h1>{error}</h1>}
 

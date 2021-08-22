@@ -1,0 +1,36 @@
+.About_question_item {  
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-top: 1px solid rgba(83,153,140, .2);
+  position: relative;
+  &:last-child {
+    border-bottom: 1px solid rgba(83,153,140, .2);
+  }
+}
+
+.About_question_title {
+  font-size: res(15, 18);
+  line-height: 120%;
+  color: $green;
+  width: 80%;
+}
+
+.About_question_showbtn {
+  position: absolute;
+  top: calc(50% - 15px);
+  right: 15px;
+  cursor: pointer;  
+}
+
+.active {
+  top: calc(28% - 15px); 
+  transform: rotate(45deg);
+}
+
+.About_question_answer {
+  font-size: res(15, 18);
+  line-height: 120%;
+  color: $turquoise;
+  margin-top: 8px;
+}
