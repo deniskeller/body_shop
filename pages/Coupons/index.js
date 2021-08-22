@@ -9,7 +9,7 @@ import Mango from '../../assets/img/Mango';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Coupons = () => {
-  const [promocode, setPromocode] = React.useState(1);
+  const [promocode, setPromocode] = React.useState(2);
 
   return (
     <Layout>
