@@ -1,0 +1,41 @@
+.Coupons_topimg, .Coupons_botimg {
+  position: absolute;
+}
+
+.Coupons_topimg {
+  top: 0;
+  right: 0;
+}
+
+.Coupons_botimg {
+  bottom: 0;
+  right: 0;
+}
+
+.Coupons {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.Coupons_item {
+  width: res(260, 360);
+  height: res(379, 479);
+  background: $light_beige;
+  border-radius: 30px;
+  padding: 150px 0px 32px;
+  position: relative;
+}
+
+.Coupons_description {
+  font-size: res(15, 18);
+  color: $turquoise;
+}
+
+.Avocado, .Mango {
+  position: absolute;
+  top: -42px;
+  left: calc(50% - 80px);
+}

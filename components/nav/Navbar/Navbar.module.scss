@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: em(40px) em(15px) 0;
+  padding: em(40px) em(15px);
   position: relative;
   z-index: 10;
 }
@@ -18,10 +18,6 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
-}
-
-.Navbar__logoText {
-  margin-bottom: em(32px);
 }
 
 .Navbar__burger {
