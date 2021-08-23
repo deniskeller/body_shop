@@ -1,11 +1,11 @@
 import React from 'react';
-import { BaseTitle, Layout } from '../../components';
-import styles from './Rating.module.scss';
-import { background, colors } from '../../utils/global';
-import hiddenMail from '../../utils/hiddenMail';
-import RatingTop from '../../assets/img/RatingTop';
-import RatingBottom from '../../assets/img/RatingBottom';
-import getAllUsers from '../../API/RatingServices';
+import { BaseTitle, Layout } from '../components';
+import styles from '../styles/Rating.module.scss';
+import { background, colors } from '../utils/global';
+import hiddenMail from '../utils/hiddenMail';
+import RatingTop from '../assets/img/RatingTop';
+import RatingBottom from '../assets/img/RatingBottom';
+import getAllUsers from '../API/RatingServices';
 
 const mockUsers = [
   { user_id: 15, user_mail: 'keller@gmail.com', user_score: 1300 },

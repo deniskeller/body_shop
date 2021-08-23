@@ -1,10 +1,10 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import AuthTopLeft from '../../assets/img/AuthTopLeft';
-import AuthTopRight from '../../assets/img/AuthTopRight';
-import AuthBotLeft from '../../assets/img/AuthBotLeft';
-import AuthBotRight from '../../assets/img/AuthBotRight';
-import LogoImg from '../../assets/img/LogoImg';
+import AuthTopLeft from '../assets/img/AuthTopLeft';
+import AuthTopRight from '../assets/img/AuthTopRight';
+import AuthBotLeft from '../assets/img/AuthBotLeft';
+import AuthBotRight from '../assets/img/AuthBotRight';
+import LogoImg from '../assets/img/LogoImg';
 import {
   BaseButton,
   BaseInput,
@@ -12,8 +12,8 @@ import {
   BaseSubtitle,
   BaseTitle,
   Layout,
-} from '../../components';
-import styles from './Restore.module.scss';
+} from '../components';
+import styles from '../styles/Restore.module.scss';
 
 const testMail = 'kek@mail.ru';
 

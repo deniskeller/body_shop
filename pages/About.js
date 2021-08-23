@@ -1,18 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-  BaseButton,
-  BaseTitle,
-  Layout,
-  QuestionItem,
-} from '../../components';
-import styles from './About.module.scss';
-import { background } from '../../utils/global';
-import { Arrow } from '../../assets/img/Arrow';
-import hiddenMail from '../../utils/hiddenMail';
-import SocialBg from '../../assets/img/SocialBg';
-import AboutFooterTop from '../../assets/img/AboutFooterTop';
-import AboutFooterBot from '../../assets/img/AboutFooterBot';
+import { BaseButton, BaseTitle, Layout, QuestionItem } from '../components';
+import { background } from '../utils/global';
+import { Arrow } from '../assets/img/Arrow';
+import hiddenMail from '../utils/hiddenMail';
+import SocialBg from '../assets/img/SocialBg';
+import AboutFooterTop from '../assets/img/AboutFooterTop';
+import AboutFooterBot from '../assets/img/AboutFooterBot';
+import styles from '../styles/About.module.scss';
 
 const mockUsers = [
   {
@@ -172,8 +167,7 @@ const About = () => {
           </span>
         </p>
         {/* тут будет картинка кота с призами */}
-        <div className={styles.About_catimg}>
-        </div>
+        <div className={styles.About_catimg}></div>
 
         <div className={styles.About_btn}>
           <BaseButton type='secondary'>подробнее</BaseButton>

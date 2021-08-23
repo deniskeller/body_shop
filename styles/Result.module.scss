@@ -1,0 +1,18 @@
+.Result {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Result_logo {
+  margin-bottom: 24px;
+}
+
+.Result_largetitle {
+  font-size: res(24, 47);
+}
+
+.Result_needmore_text {
+  color: $turquoise;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Coupons.module.scss';
-import { BaseSubtitle, BaseTitle, Layout } from '../../components';
-import CouponsBot from '../../assets/img/CouponsBot';
-import CouponsTop from '../../assets/img/CouponsTop';
-import Avocado from '../../assets/img/Avocado';
-import Mango from '../../assets/img/Mango';
+import styles from '../styles/Coupons.module.scss';
+import { BaseSubtitle, BaseTitle, Layout } from '../components';
+import CouponsBot from '../assets/img/CouponsBot';
+import CouponsTop from '../assets/img/CouponsTop';
+import Avocado from '../assets/img/Avocado';
+import Mango from '../assets/img/Mango';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 

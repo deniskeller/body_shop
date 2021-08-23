@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { BaseButton, Layout } from '../components';
-import styles from '../assets/styles/Error.module.scss';
+import styles from '../styles/Error.module.scss';
 import Cat404 from '../assets/img/404cat';
 import Leftimg404 from '../assets/img/404leftimg';
 import Rightimg404 from '../assets/img/404rightimg';

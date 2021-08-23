@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Politics.module.scss';
-import { Layout } from '../../components';
-import { background } from '../../utils/global';
+import styles from '../styles/Politics.module.scss';
+import { Layout } from '../components';
+import { background } from '../utils/global';
 
 const Politics = () => {
   return (

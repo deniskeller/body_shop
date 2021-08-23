@@ -7,7 +7,8 @@ import {
   Layout,
   NavbarLink,
 } from '../components';
-import styles from '../assets/styles/Home.module.scss';
+import { useRouter } from 'next/router';
+import styles from '../styles/Home.module.scss';
 import Strawberry from '../assets/img/Strawberry';
 import Grapefruit from '../assets/img/Grapefruit';
 import Leftgroup from '../assets/img/Leftgroup';
@@ -17,6 +18,8 @@ import LogoImg from '../assets/img/LogoImg';
 export default function Home() {
   const [auth, setAuth] = React.useState(false);
   const [recordValue, setRecordValue] = React.useState(1300);
+
+  const router = useRouter();
 
   return (
     <Layout>
@@ -56,7 +59,12 @@ export default function Home() {
             Помоги котику собрать <br /> ингредиенты из новой коллекции <br />{' '}
             масел для тела «The Body Shop»
           </BaseSubtitle>
-          <BaseButton style={{ marginBottom: 16 }}>Играть</BaseButton>
+          <BaseButton
+            style={{ marginBottom: 16 }}
+            method={() => router.push('/result')}
+          >
+            Играть
+          </BaseButton>
           {auth ? (
             <div className={styles.Record}>
               Рекорд: <span>{recordValue}</span>
