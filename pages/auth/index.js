@@ -9,25 +9,25 @@ import styles from './Auth.module.scss';
 import { useRouter } from 'next/router';
 
 const testData = {
-  mail: 'kek@mail.ru',
+  email: 'kek@mail.ru',
   password: '123',
 };
 
 const Auth = () => {
   const router = useRouter();
-  const [data, setData] = React.useState({ mail: '', password: '' });
+  const [data, setData] = React.useState({ email: '', password: '' });
   const [isConfirm, setIsConfirm] = React.useState(true);
-  const [isMail, setIsMail] = React.useState(null);
+  const [isEmail, setIsEmail] = React.useState(null);
   const [isPassword, setIsPassword] = React.useState(null);
 
   const confirm = () => {
-    if (testData.mail === data.mail && testData.password === data.password) {
+    if (testData.email === data.email && testData.password === data.password) {
       console.log('Пользователь авторизован');
       router.push('/');
     } else {
       console.log('Введеные данные не верны');
-      if (testData.mail !== data.mail) {
-        setIsMail(true);
+      if (testData.email !== data.email) {
+        setIsEmail(true);
       }
       if (testData.password !== data.password) {
         setIsPassword(true);
@@ -51,10 +51,10 @@ const Auth = () => {
 
         <BaseInput
           placeholder='Email'
-          value={data.mail}
-          onChange={(e) => setData({ ...data, mail: e.target.value })}
+          value={data.email}
+          onChange={(e) => setData({ ...data, email: e.target.value })}
           style={{ marginBottom: 16 }}
-          isError={isMail}
+          isError={isEmail}
         />
 
         <BaseInput
@@ -69,7 +69,7 @@ const Auth = () => {
         <BaseButton
           style={{ width: '100%', marginBottom: 8 }}
           method={confirm}
-          disabled={!data.mail || !data.password}
+          disabled={!data.email || !data.password}
         >
           Войти
         </BaseButton>
