@@ -1,0 +1,40 @@
+.Wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.Input {
+  width: 100%;
+  height: res(40, 50);
+  border-radius: 8px;
+  background: $light_beige;
+  font-size: res(15, 18);
+  line-height: 120%;
+  color: $green;
+  border: none;
+  padding: 10px 15px;
+  outline: none;
+
+  &::-webkit-input-placeholder {
+    color: #53998C;
+  }
+  &::-moz-placeholder {
+    color: #53998C;
+  }
+  &:-ms-input-placeholder {
+    color: #53998C;
+  }
+  &:-moz-placeholder {
+    color: #53998C;
+  }
+}
+
+.Error {
+  position: absolute;
+  right: 6px;
+  bottom: 18px;
+  font-size: res(10,12);
+  line-height: 120%;
+  text-transform: uppercase;
+  color: $red;
+}

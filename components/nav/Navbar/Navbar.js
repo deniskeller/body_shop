@@ -10,7 +10,7 @@ const Navbar = () => {
     { id: 1, href: '/Coupons', title: 'Мои купоны' },
     { id: 2, href: '/Rating', title: 'рейтинг игроков' },
     { id: 3, href: '/About', title: 'Об игре' },
-    { id: 4, href: '/Auth', title: 'Выйти' },
+    { id: 4, href: '/', title: 'Выйти' },
   ];
   const [burgerActive, setBurgerActive] = React.useState(false);
 

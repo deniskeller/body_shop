@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import {
   BaseButton,
-  BaseSubtitle,
   BaseTitle,
   Layout,
   QuestionItem,
@@ -173,6 +172,8 @@ const About = () => {
           </span>
         </p>
         {/* тут будет картинка кота с призами */}
+        <div className={styles.About_catimg}>
+        </div>
 
         <div className={styles.About_btn}>
           <BaseButton type='secondary'>подробнее</BaseButton>

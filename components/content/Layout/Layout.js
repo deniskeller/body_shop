@@ -9,9 +9,9 @@ const Layout = ({ children, bg }) => {
   const [bgcolor, setBgcolor] = React.useState(background.beige);
 
   const showCookie = () => {
-    setTimeout(() => {
-      setIsCookie(true);
-    }, 3000);
+    // setTimeout(() => {
+    setIsCookie(true);
+    // }, 3000);
   };
 
   const hiddenCookie = () => {
