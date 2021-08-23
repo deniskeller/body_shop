@@ -1,12 +1,12 @@
 import React from 'react';
-import AuthBotLeft from '../../assets/img/AuthBotLeft';
-import AuthBotRight from '../../assets/img/AuthBotRight';
-import AuthTopLeft from '../../assets/img/AuthTopLeft';
-import AuthTopRight from '../../assets/img/AuthTopRight';
-import LogoImg from '../../assets/img/LogoImg';
-import { BaseButton, BaseInput, Layout } from '../../components';
+import AuthBotLeft from '../assets/img/AuthBotLeft';
+import AuthBotRight from '../assets/img/AuthBotRight';
+import AuthTopLeft from '../assets/img/AuthTopLeft';
+import AuthTopRight from '../assets/img/AuthTopRight';
+import LogoImg from '../assets/img/LogoImg';
+import { BaseButton, BaseInput, Layout } from '../components';
 import { useRouter } from 'next/router';
-import styles from '../../assets/styles/Auth.module.scss';
+import styles from '../assets/styles/Auth.module.scss';
 
 const testData = {
   email: 'kek@mail.ru',
