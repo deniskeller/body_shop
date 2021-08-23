@@ -5,8 +5,8 @@ import AuthTopLeft from '../../assets/img/AuthTopLeft';
 import AuthTopRight from '../../assets/img/AuthTopRight';
 import LogoImg from '../../assets/img/LogoImg';
 import { BaseButton, BaseInput, Layout } from '../../components';
-import styles from './Auth.module.scss';
 import { useRouter } from 'next/router';
+import styles from './Auth.module.scss';
 
 const testData = {
   email: 'kek@mail.ru',
