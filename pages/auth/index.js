@@ -21,7 +21,6 @@ const auth = () => {
   const [isPassword, setIsPassword] = React.useState(null);
 
   const confirm = () => {
-    console.log('data: ', data);
     if (testData.mail === data.mail && testData.password === data.password) {
       console.log('Пользователь авторизован');
       router.push('/');
@@ -40,10 +39,6 @@ const auth = () => {
   const restorePassword = () => {
     router.push('/Restore');
   };
-
-  React.useEffect(() => {
-    // console.log('data: ', data);
-  }, [data]);
 
   return (
     <Layout>
