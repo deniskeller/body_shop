@@ -13,7 +13,7 @@ const testData = {
   password: '123',
 };
 
-const auth = () => {
+const Auth = () => {
   const router = useRouter();
   const [data, setData] = React.useState({ mail: '', password: '' });
   const [isConfirm, setIsConfirm] = React.useState(true);
@@ -95,4 +95,4 @@ const auth = () => {
   );
 };
 
-export default auth;
+export default Auth;
