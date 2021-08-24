@@ -3,10 +3,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 99;
+  padding-bottom: 196px;
 }
 
 .Result_logo {
   margin-bottom: 24px;
+  position: relative;
 }
 
 .Result_largetitle {
@@ -15,4 +18,33 @@
 
 .Result_needmore_text {
   color: $turquoise;
+}
+
+.ResultBot, .ResultTopLeft, .ResultTopRight, .ResultCatBlue, .ResultCatRed {
+  position: absolute;
+}
+
+.ResultBot {
+  bottom: 0;
+  left: 0;
+}
+
+.ResultTopLeft {
+  top: 0;
+  left: 0;
+}
+
+.ResultTopRight {
+  top: 0;
+  right: 0;
+}
+
+.ResultCatBlue {
+  bottom: 0;
+  right: 0;
+}
+
+.ResultCatRed {
+  bottom: 0;
+  right: 20px;
 }

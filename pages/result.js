@@ -1,9 +1,14 @@
 import React from 'react';
-import styles from '../styles/Result.module.scss';
 import { useRouter } from 'next/router';
-
 import { BaseButton, BaseSubtitle, BaseTitle, Layout } from '../components';
+import styles from '../styles/Result.module.scss';
+
 import LogoImg from '../assets/img/LogoImg';
+import ResultBot from '../assets/img/ResultBot';
+import ResultTopLeft from '../assets/img/ResultTopLeft';
+import ResultTopRight from '../assets/img/ResultTopRight';
+import ResultCatRed from '../assets/img/ResultCatRed';
+import ResultCatBlue from '../assets/img/ResultCatBlue';
 
 const auth = false;
 
@@ -15,14 +20,24 @@ const Result = () => {
 
   return (
     <Layout>
+      <ResultBot className={styles.ResultBot} />
+      <ResultTopLeft className={styles.ResultTopLeft} />
+      <ResultTopRight className={styles.ResultTopRight} />
+
+      {!auth ? (
+        <ResultCatBlue className={styles.ResultCatBlue} />
+      ) : (
+        <ResultCatRed className={styles.ResultCatRed} />
+      )}
+
       <div className={styles.Result}>
-        <div className={styles.Result_logo}>
-          <LogoImg />
-        </div>
+        <LogoImg className={styles.Result_logo} />
 
         {auth ? (
           <>
-            <BaseTitle style={{ marginBottom: 8, fontSize: 34 }}>
+            <BaseTitle
+              style={{ marginBottom: 8, fontSize: 34, lineHeight: '95%' }}
+            >
               {mockScore}
               <br />
               <span className={styles.Result_largetitle}>очков</span>
@@ -31,7 +46,6 @@ const Result = () => {
             {mockScore > need_score ? (
               <BaseSubtitle style={{ marginBottom: 24 }}>
                 Это победа! <br />
-                <br />
                 Ты получаешь скидку 30%.
                 <br />
                 Промо-код отправлен тебе на email.
@@ -40,7 +54,6 @@ const Result = () => {
               <BaseSubtitle style={{ marginBottom: 24 }}>
                 <span className={styles.Result_needmore_text}>
                   До получения промо-кода <br /> следующего уровня не хватает:
-                  <br />
                   <br />
                 </span>
                 105 очков
@@ -53,7 +66,9 @@ const Result = () => {
           </>
         ) : (
           <>
-            <BaseTitle style={{ marginBottom: 8, fontSize: 18 }}>
+            <BaseTitle
+              style={{ marginBottom: 8, fontSize: 18, lineHeight: '130%' }}
+            >
               Поздравляем
               <br />
               <span className={styles.Result_largetitle}>с победой</span>
