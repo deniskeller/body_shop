@@ -1,26 +1,27 @@
 import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import {
   BaseButton,
   BasePopup,
   BaseSubtitle,
   BaseTitle,
-  Layout,
   NavbarLink,
 } from '../..';
+import styled from './Navbar.module.scss';
 import Burger from '../../../assets/img/Burger';
 import LogoText from '../../../assets/img/LogoText';
-import Link from 'next/link';
-import styled from './Navbar.module.scss';
 
 const Navbar = () => {
+  const router = useRouter();
+
   const links = [
     { id: 1, href: '/coupons', title: 'Мои купоны' },
     { id: 2, href: '/rating', title: 'рейтинг игроков' },
     { id: 3, href: '/about', title: 'Об игре' },
-    // { id: 4, href: '/', title: 'Выйти' },
   ];
-  const [burgerActive, setBurgerActive] = React.useState(false);
 
+  const [burgerActive, setBurgerActive] = React.useState(false);
   const [modal, setModal] = React.useState(false);
 
   return (
@@ -38,7 +39,9 @@ const Navbar = () => {
         >
           Да
         </BaseButton>
-        <BaseButton type='clear'>Не выходить</BaseButton>
+        <BaseButton method={() => setModal(false)} type='clear'>
+          Не выходить
+        </BaseButton>
       </BasePopup>
 
       <div className={styled.Navbar}>
@@ -90,7 +93,11 @@ const Navbar = () => {
               })}
             </div>
 
-            <BaseButton type='clear' style={{ marginBottom: 40 }}>
+            <BaseButton
+              method={() => setModal(true)}
+              type='clear'
+              style={{ marginBottom: 40 }}
+            >
               Выйти
             </BaseButton>
 
