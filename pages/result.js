@@ -22,9 +22,7 @@ const Result = () => {
 
         {auth ? (
           <>
-            <BaseTitle
-              style={{ marginBottom: 8, fontSize: 34, lineHeight: '90%' }}
-            >
+            <BaseTitle style={{ marginBottom: 8, fontSize: 34 }}>
               {mockScore}
               <br />
               <span className={styles.Result_largetitle}>очков</span>
