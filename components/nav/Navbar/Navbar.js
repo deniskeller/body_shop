@@ -10,7 +10,7 @@ const Navbar = () => {
     { id: 1, href: '/coupons', title: 'Мои купоны' },
     { id: 2, href: '/rating', title: 'рейтинг игроков' },
     { id: 3, href: '/about', title: 'Об игре' },
-    { id: 4, href: '/', title: 'Выйти' },
+    // { id: 4, href: '/', title: 'Выйти' },
   ];
   const [burgerActive, setBurgerActive] = React.useState(false);
 
@@ -63,9 +63,10 @@ const Navbar = () => {
               );
             })}
           </div>
-          {/* <BaseButton type='clear' style={{ marginBottom: 58 }}>
+
+          <BaseButton type='clear' style={{ marginBottom: 40 }}>
             Выйти
-          </BaseButton> */}
+          </BaseButton>
 
           <Link href='/politics'>
             <p className={styled.NavbarActive__text}>
