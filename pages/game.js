@@ -48,7 +48,7 @@ const Game = () => {
   React.useEffect(() => {
     computedColor();
     if (minutes < 1 && seconds < 1) {
-      router.push('/register');
+      router.push('/results');
     }
   }, [seconds]);
 
