@@ -39,7 +39,7 @@
   z-index: 1000;
   background: $beige;
   min-height: 100vh;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,6 +99,7 @@
   justify-content: center;
   flex-direction: column;
   padding-top: 32px;
+  width: 100%;
   span {
     font-size: 0px;
     margin-bottom: 16px;
