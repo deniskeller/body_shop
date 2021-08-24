@@ -5,8 +5,26 @@
   justify-content: center;
   padding: 40px 15px;
   position: relative;
-  z-index: 10000;
-  
+  z-index: 10000;  
+}
+
+.NavbarTop, .NavbarBotLeft, .NavbarBotRight {
+  position: absolute;
+}
+
+.NavbarTop {
+  top: 0;
+  left: 0;
+}
+
+.NavbarBotLeft {
+  left: 0;
+  bottom: 0;
+}
+
+.NavbarBotRight {
+  bottom: 0;
+  right: 0;
 }
 
 .NavbarDefault, .NavbarActive {

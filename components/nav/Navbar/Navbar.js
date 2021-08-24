@@ -11,6 +11,9 @@ import {
 import styled from './Navbar.module.scss';
 import Burger from '../../../assets/img/Burger';
 import LogoText from '../../../assets/img/LogoText';
+import NavbarTop from '../../../assets/img/NavbarTop';
+import NavbarBotLeft from '../../../assets/img/NavbarBotLeft';
+import NavbarBotRight from '../../../assets/img/NavbarBotRight';
 
 const Navbar = () => {
   const auth = true;
@@ -62,6 +65,10 @@ const Navbar = () => {
           </div>
         ) : (
           <div className={styled.NavbarActive}>
+            <NavbarTop className={styled.NavbarTop} />
+            <NavbarBotLeft className={styled.NavbarBotLeft} />
+            <NavbarBotRight className={styled.NavbarBotRight} />
+
             <div className={styled.NavbarActive__logo}>
               <div className={styled.NavbarActive__logoText}>
                 <LogoText />

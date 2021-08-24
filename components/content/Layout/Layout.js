@@ -24,7 +24,7 @@ const Layout = ({ children, bg }) => {
 
   React.useEffect(() => {
     setBgcolor(bg);
-  }, [bgcolor]);
+  }, [bg]);
 
   return (
     <>
