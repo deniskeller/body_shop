@@ -39,7 +39,7 @@ const Game = () => {
   });
 
   const computedColor = () => {
-    if (seconds <= 30 && minutes != 1) {
+    if (seconds <= 15 && minutes != 1) {
       return '#EF8194';
     }
     return '#53998C';
@@ -48,7 +48,7 @@ const Game = () => {
   React.useEffect(() => {
     computedColor();
     if (minutes < 1 && seconds < 1) {
-      router.push('/results');
+      router.push('/result');
     }
   }, [seconds]);
 
