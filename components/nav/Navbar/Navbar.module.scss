@@ -127,8 +127,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 32px;
+  // padding-top: 32px;
   width: 100%;
+  min-height: 200px;
   span {
     font-size: 0px;
     margin-bottom: 16px;
