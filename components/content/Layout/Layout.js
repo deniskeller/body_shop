@@ -3,7 +3,7 @@ import { Cookie, Navbar } from '../..';
 import { background } from '../../../utils/global';
 import styles from './Layout.module.scss';
 
-const Layout = ({ children, bg }) => {
+const Layout = ({ children, bg, fill }) => {
   const [isCookie, setIsCookie] = React.useState(false);
 
   const [bgcolor, setBgcolor] = React.useState(background.beige);
@@ -29,7 +29,7 @@ const Layout = ({ children, bg }) => {
   return (
     <>
       <div className={styles.layout} style={{ background: `${bgcolor}` }}>
-        <Navbar />
+        <Navbar fill={fill} />
         <div>{children}</div>
         {isCookie && <Cookie handlerCookie={hiddenCookie} />}
       </div>

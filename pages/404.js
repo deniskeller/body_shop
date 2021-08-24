@@ -9,7 +9,7 @@ import { background } from '../utils/global';
 
 const Error = () => {
   return (
-    <Layout bg={background.green}>
+    <Layout bg={background.green} fill='#ffffff'>
       <div className={styles.Cat404}>
         <Cat404 />
       </div>

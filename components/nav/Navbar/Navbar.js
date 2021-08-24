@@ -15,7 +15,7 @@ import NavbarTop from '../../../assets/img/NavbarTop';
 import NavbarBotLeft from '../../../assets/img/NavbarBotLeft';
 import NavbarBotRight from '../../../assets/img/NavbarBotRight';
 
-const Navbar = () => {
+const Navbar = ({ fill }) => {
   const auth = true;
   const router = useRouter();
 
@@ -51,15 +51,16 @@ const Navbar = () => {
       <div className={styled.Navbar}>
         {!burgerActive ? (
           <div className={styled.NavbarDefault}>
-            <div className={styled.Navbar__logo}>
-              <div className={styled.Navbar__logoText}>
-                <LogoText />
-              </div>
+            <div className={styled.NavbarDefault__logo}>
+              <LogoText
+                className={styled.NavbarDefault__logoText}
+                fill={fill}
+              />
               <div
-                className={styled.Navbar__burger}
+                className={styled.NavbarDefault__burger}
                 onClick={() => setBurgerActive(!burgerActive)}
               >
-                <Burger open={burgerActive} />
+                <Burger open={burgerActive} fill={fill} />
               </div>
             </div>
           </div>
@@ -71,9 +72,7 @@ const Navbar = () => {
               <NavbarBotRight className={styled.NavbarBotRight} />
 
               <div className={styled.NavbarActive__logo}>
-                <div className={styled.NavbarActive__logoText}>
-                  <LogoText />
-                </div>
+                <LogoText className={styled.NavbarActivet__logoText} />
                 <div
                   className={styled.NavbarActive__burger}
                   onClick={() => setBurgerActive(!burgerActive)}

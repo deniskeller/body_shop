@@ -152,7 +152,7 @@ const Rating = () => {
   }, []);
 
   return (
-    <Layout bg={background.green}>
+    <Layout bg={background.green} fill='#ffffff'>
       <div className={styles.RatingTop}>
         <RatingTop />
       </div>
