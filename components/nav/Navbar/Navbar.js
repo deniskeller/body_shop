@@ -65,86 +65,90 @@ const Navbar = () => {
           </div>
         ) : (
           <div className={styled.NavbarActive}>
-            <NavbarTop className={styled.NavbarTop} />
-            <NavbarBotLeft className={styled.NavbarBotLeft} />
-            <NavbarBotRight className={styled.NavbarBotRight} />
+            <div className={styled.wrapper}>
+              <NavbarTop className={styled.NavbarTop} />
+              <NavbarBotLeft className={styled.NavbarBotLeft} />
+              <NavbarBotRight className={styled.NavbarBotRight} />
 
-            <div className={styled.NavbarActive__logo}>
-              <div className={styled.NavbarActive__logoText}>
-                <LogoText />
-              </div>
-              <div
-                className={styled.NavbarActive__burger}
-                onClick={() => setBurgerActive(!burgerActive)}
-              >
-                <Burger open={burgerActive} />
-              </div>
-            </div>
-
-            {auth ? (
-              <div className={styled.NavbarActive__userinfo}>
-                <div className={styled.NavbarActive__usermail}>
-                  konstantinopol@gmail.com
+              <div className={styled.NavbarActive__logo}>
+                <div className={styled.NavbarActive__logoText}>
+                  <LogoText />
                 </div>
-                <div className={styled.NavbarActive__userplace}>103 место</div>
-                <div className={styled.NavbarActive__userrecorde}>
-                  Рекорд за неделю: 1300
-                </div>
-              </div>
-            ) : (
-              <div className={styled.NavbarActive__userinfo}>
-                <p className={styled.NavbarActive__text}>
-                  Ты не вошёл в аккаунт
-                </p>
-                <BaseButton
-                  type='secondary'
-                  method={() => router.push('/auth')}
+                <div
+                  className={styled.NavbarActive__burger}
+                  onClick={() => setBurgerActive(!burgerActive)}
                 >
-                  Войти
+                  <Burger open={burgerActive} />
+                </div>
+              </div>
+
+              {auth ? (
+                <div className={styled.NavbarActive__userinfo}>
+                  <div className={styled.NavbarActive__usermail}>
+                    konstantinopol@gmail.com
+                  </div>
+                  <div className={styled.NavbarActive__userplace}>
+                    103 место
+                  </div>
+                  <div className={styled.NavbarActive__userrecorde}>
+                    Рекорд за неделю: 1300
+                  </div>
+                </div>
+              ) : (
+                <div className={styled.NavbarActive__userinfo}>
+                  <p className={styled.NavbarActive__text}>
+                    Ты не вошёл в аккаунт
+                  </p>
+                  <BaseButton
+                    type='secondary'
+                    method={() => router.push('/auth')}
+                  >
+                    Войти
+                  </BaseButton>
+                </div>
+              )}
+
+              {auth ? (
+                <div className={styled.NavbarActive__nav}>
+                  {links.map((link) => {
+                    return (
+                      <span key={link.id}>
+                        <NavbarLink href={link.href} title={link.title} />
+                      </span>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className={styled.NavbarActive__nav}>
+                  <span style={{ marginBottom: 142 }}>
+                    <NavbarLink href={links[2].href} title={links[2].title} />
+                  </span>
+                </div>
+              )}
+
+              {auth ? (
+                <BaseButton
+                  method={() => setModal(true)}
+                  type='clear'
+                  style={{ marginBottom: 40 }}
+                >
+                  Выйти
                 </BaseButton>
-              </div>
-            )}
+              ) : (
+                ''
+              )}
 
-            {auth ? (
-              <div className={styled.NavbarActive__nav}>
-                {links.map((link) => {
-                  return (
-                    <span key={link.id}>
-                      <NavbarLink href={link.href} title={link.title} />
-                    </span>
-                  );
-                })}
-              </div>
-            ) : (
-              <div className={styled.NavbarActive__nav}>
-                <span style={{ marginBottom: 142 }}>
-                  <NavbarLink href={links[2].href} title={links[2].title} />
-                </span>
-              </div>
-            )}
+              <Link href='/politics'>
+                <p className={styled.NavbarActive__text}>
+                  Политика обработки <br /> персональных данных
+                </p>
+              </Link>
 
-            {auth ? (
-              <BaseButton
-                method={() => setModal(true)}
-                type='clear'
-                style={{ marginBottom: 40 }}
-              >
-                Выйти
-              </BaseButton>
-            ) : (
-              ''
-            )}
-
-            <Link href='/politics'>
               <p className={styled.NavbarActive__text}>
-                Политика обработки <br /> персональных данных
+                © 2021. The Body Shop.
+                <br /> Все права защищены.
               </p>
-            </Link>
-
-            <p className={styled.NavbarActive__text}>
-              © 2021. The Body Shop.
-              <br /> Все права защищены.
-            </p>
+            </div>
           </div>
         )}
       </div>
