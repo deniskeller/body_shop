@@ -7,9 +7,9 @@ import styled from './Navbar.module.scss';
 
 const Navbar = () => {
   const links = [
-    { id: 1, href: '/Coupons', title: 'Мои купоны' },
-    { id: 2, href: '/Rating', title: 'рейтинг игроков' },
-    { id: 3, href: '/About', title: 'Об игре' },
+    { id: 1, href: '/coupons', title: 'Мои купоны' },
+    { id: 2, href: '/rating', title: 'рейтинг игроков' },
+    { id: 3, href: '/about', title: 'Об игре' },
     { id: 4, href: '/', title: 'Выйти' },
   ];
   const [burgerActive, setBurgerActive] = React.useState(false);
@@ -67,7 +67,7 @@ const Navbar = () => {
             Выйти
           </BaseButton> */}
 
-          <Link href='/Politics'>
+          <Link href='/politics'>
             <p className={styled.NavbarActive__text}>
               Политика обработки <br /> персональных данных
             </p>

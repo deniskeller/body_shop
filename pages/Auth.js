@@ -37,7 +37,7 @@ const Auth = () => {
   };
 
   const restorePassword = () => {
-    router.push('/Restore');
+    router.push('/restore');
   };
 
   return (

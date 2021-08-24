@@ -45,11 +45,35 @@ const Coupons = () => {
           </div>
         ) : (
           <Swiper
-            slidesPerView={1.2}
-            spaceBetween={8}
-            slidesOffsetBefore={15}
-            slidesOffsetAfter={15}
-            className='mySwiper'
+            breakpoints={{
+              320: {
+                width: 320,
+                slidesPerView: 1.2,
+                spaceBetween: 8,
+                slidesOffsetBefore: 15,
+                slidesOffsetAfter: 15,
+              },
+              375: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              640: {
+                width: 620,
+                slidesPerView: 2,
+                spaceBetween: 20,
+                slidesOffsetBefore: 15,
+                slidesOffsetAfter: 15,
+                allowTouchMove: false,
+              },
+              768: {
+                width: 640,
+                slidesPerView: 2,
+                spaceBetween: 20,
+                slidesOffsetBefore: 20,
+                slidesOffsetAfter: 20,
+                allowTouchMove: false,
+              },
+            }}
           >
             <SwiperSlide>
               <div className=''>

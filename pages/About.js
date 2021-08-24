@@ -369,24 +369,26 @@ const About = () => {
       </div>
 
       <div className={styles.About_footer}>
-        <div className={styles.About_footer_topimg}>
-          <AboutFooterTop />
-        </div>
-        <div className={styles.About_footer_botimg}>
-          <AboutFooterBot />
-        </div>
-        <div className={styles.About_footer_title}>
-          <BaseTitle type='left' style={{ color: '#FFED76' }}>
-            связаться <br />с нами
-          </BaseTitle>
-        </div>
-        <div className={styles.About_footer_subtitle}>
-          Напиши нам, и мы ответим <br /> на интересующие тебя вопросы
-        </div>
+        <div className={styles.About_footer_content}>
+          <div className={styles.About_footer_topimg}>
+            <AboutFooterTop />
+          </div>
+          <div className={styles.About_footer_botimg}>
+            <AboutFooterBot />
+          </div>
+          <div className={styles.About_footer_title}>
+            <BaseTitle type='left' style={{ color: '#FFED76' }}>
+              связаться <br />с нами
+            </BaseTitle>
+          </div>
+          <div className={styles.About_footer_subtitle}>
+            Напиши нам, и мы ответим <br /> на интересующие тебя вопросы
+          </div>
 
-        <BaseButton type='default' style={{ width: '100%' }}>
-          написать
-        </BaseButton>
+          <BaseButton type='default' style={{ width: '100%' }}>
+            написать
+          </BaseButton>
+        </div>
       </div>
     </Layout>
   );

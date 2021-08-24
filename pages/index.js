@@ -23,21 +23,13 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className={styles.Grapefruit}>
-        <Grapefruit />
-      </div>
+      <Grapefruit className={styles.Grapefruit} />
 
-      <div className={styles.Strawberry}>
-        <Strawberry />
-      </div>
+      <Strawberry className={styles.Strawberry} />
 
-      <div className={styles.Leftgroup}>
-        <Leftgroup />
-      </div>
+      <Leftgroup className={styles.Leftgroup} />
 
-      <div className={styles.Rightgroup}>
-        <Rightgroup />
-      </div>
+      <Rightgroup className={styles.Rightgroup} />
 
       <div className={styles.MainContent}>
         <Head>
@@ -70,7 +62,7 @@ export default function Home() {
               Рекорд: <span>{recordValue}</span>
             </div>
           ) : (
-            <NavbarLink href='/Auth' title='Войти' />
+            <NavbarLink href='/auth' title='Войти' />
           )}
         </main>
       </div>
