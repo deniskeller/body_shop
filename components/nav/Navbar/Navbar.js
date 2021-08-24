@@ -73,6 +73,7 @@ const Navbar = ({ fill }) => {
 
               <div className={styled.NavbarActive__logo}>
                 <LogoText className={styled.NavbarActivet__logoText} />
+
                 <div
                   className={styled.NavbarActive__burger}
                   onClick={() => setBurgerActive(!burgerActive)}
