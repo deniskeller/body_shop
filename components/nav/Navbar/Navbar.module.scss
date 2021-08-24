@@ -6,6 +6,8 @@
   padding: 40px 15px;
   position: relative;
   z-index: 10000;
+  min-height: 100%;
+  overflow: auto;
 }
 
 .NavbarDefault, .NavbarActive {
