@@ -13,6 +13,7 @@ import Burger from '../../../assets/img/Burger';
 import LogoText from '../../../assets/img/LogoText';
 
 const Navbar = () => {
+  const auth = false;
   const router = useRouter();
 
   const links = [
@@ -73,33 +74,59 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className={styled.NavbarActive__userinfo}>
-              <div className={styled.NavbarActive__usermail}>
-                konstantinopol@gmail.com
+            {auth ? (
+              <div className={styled.NavbarActive__userinfo}>
+                <div className={styled.NavbarActive__usermail}>
+                  konstantinopol@gmail.com
+                </div>
+                <div className={styled.NavbarActive__userplace}>103 место</div>
+                <div className={styled.NavbarActive__userrecorde}>
+                  Рекорд за неделю: 1300
+                </div>
               </div>
-              <div className={styled.NavbarActive__userplace}>103 место</div>
-              <div className={styled.NavbarActive__userrecorde}>
-                Рекорд за неделю: 1300
+            ) : (
+              <div className={styled.NavbarActive__userinfo}>
+                <p className={styled.NavbarActive__text}>
+                  Ты не вошёл в аккаунт
+                </p>
+                <BaseButton
+                  type='secondary'
+                  method={() => router.push('/auth')}
+                >
+                  Войти
+                </BaseButton>
               </div>
-            </div>
+            )}
 
-            <div className={styled.NavbarActive__nav}>
-              {links.map((link) => {
-                return (
-                  <span key={link.id}>
-                    <NavbarLink href={link.href} title={link.title} />
-                  </span>
-                );
-              })}
-            </div>
+            {auth ? (
+              <div className={styled.NavbarActive__nav}>
+                {links.map((link) => {
+                  return (
+                    <span key={link.id}>
+                      <NavbarLink href={link.href} title={link.title} />
+                    </span>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className={styled.NavbarActive__nav}>
+                <span style={{ marginBottom: 142 }}>
+                  <NavbarLink href={links[2].href} title={links[2].title} />
+                </span>
+              </div>
+            )}
 
-            <BaseButton
-              method={() => setModal(true)}
-              type='clear'
-              style={{ marginBottom: 40 }}
-            >
-              Выйти
-            </BaseButton>
+            {auth ? (
+              <BaseButton
+                method={() => setModal(true)}
+                type='clear'
+                style={{ marginBottom: 40 }}
+              >
+                Выйти
+              </BaseButton>
+            ) : (
+              ''
+            )}
 
             <Link href='/politics'>
               <p className={styled.NavbarActive__text}>
