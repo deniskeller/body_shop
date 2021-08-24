@@ -13,7 +13,7 @@ import Burger from '../../../assets/img/Burger';
 import LogoText from '../../../assets/img/LogoText';
 
 const Navbar = () => {
-  const auth = false;
+  const auth = true;
   const router = useRouter();
 
   const links = [
