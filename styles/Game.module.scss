@@ -1,0 +1,104 @@
+.Game {
+  background: $beige;
+  position: relative;
+  padding: 32px 15px;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.GameTopLeft, .GameTopRight, .GameBot {
+  position: absolute;
+}
+
+.GameTopLeft {
+  top: 0;
+  left: 0;
+}
+
+.GameTopRight {
+  top: 0;
+  right: 0;
+}
+
+.GameBot {
+  left: 0;
+  bottom: 0;
+}
+
+.Game_header {
+  width: 100%;
+  max-width: 290px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.Game_score {
+  position: relative;
+  padding-left: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  color: $pink;
+  line-height: 120%;
+  letter-spacing: 0.1em;
+}
+
+.Game_score_icon {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+}
+
+.Game_timer {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 120%;
+  font-family: $font-DrukWideCy;
+  text-transform: uppercase;
+  color: $turquoise;
+}
+
+.Game_content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 290px;
+}
+
+.Game_item {
+  width: 71px;
+  height: 89px;
+  background: linear-gradient(136.08deg, rgba(219, 209, 179, 0.4) -1.96%, rgba(247, 244, 235, 0.4) 100%), #F8F3E8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  
+}
+
+.Game_item_plusscore {
+  font-family: $font-DrukWideCy;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+  text-transform: uppercase;
+  position: absolute;
+  top: -12px;
+  right: -35px;
+  z-index: 1000;
+  background: linear-gradient(77.28deg, #FFCE3A 26.27%, #EF8194 104.5%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}

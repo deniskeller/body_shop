@@ -61,7 +61,7 @@ export default function Home() {
           </BaseSubtitle>
           <BaseButton
             style={{ marginBottom: 16 }}
-            method={() => router.push('/result')}
+            method={() => router.push('/game')}
           >
             Играть
           </BaseButton>
