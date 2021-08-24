@@ -24,7 +24,7 @@ const Navbar = () => {
   const [modal, setModal] = React.useState(false);
 
   return (
-    <Layout>
+    <>
       <BasePopup visible={modal} setVisible={setModal}>
         <BaseTitle style={{ marginBottom: 10 }}>выйти?</BaseTitle>
 
@@ -107,7 +107,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </Layout>
+    </>
   );
 };
 
