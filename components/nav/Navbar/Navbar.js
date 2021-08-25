@@ -139,9 +139,11 @@ const Navbar = ({ fill }) => {
               )}
 
               <Link href='/politics'>
-                <p className={styled.NavbarActive__text}>
-                  Политика обработки <br /> персональных данных
-                </p>
+                <a>
+                  <p className={styled.NavbarActive__text}>
+                    Политика обработки <br /> персональных данных
+                  </p>
+                </a>
               </Link>
 
               <p className={styled.NavbarActive__text}>
