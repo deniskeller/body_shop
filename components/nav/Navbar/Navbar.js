@@ -20,9 +20,9 @@ const Navbar = ({ fill }) => {
   const router = useRouter();
 
   const links = [
-    { id: 1, href: '/coupons', title: 'Мои купоны' },
-    { id: 2, href: '/rating', title: 'рейтинг игроков' },
-    { id: 3, href: '/about', title: 'Об игре' },
+    { id: 1, href: '/Coupons', title: 'Мои купоны' },
+    { id: 2, href: '/Rating', title: 'рейтинг игроков' },
+    { id: 3, href: '/About', title: 'Об игре' },
   ];
 
   const [burgerActive, setBurgerActive] = React.useState(false);
@@ -101,7 +101,7 @@ const Navbar = ({ fill }) => {
                   </p>
                   <BaseButton
                     type='secondary'
-                    method={() => router.push('/auth')}
+                    method={() => router.push('/Auth')}
                   >
                     Войти
                   </BaseButton>
@@ -138,7 +138,7 @@ const Navbar = ({ fill }) => {
                 ''
               )}
 
-              <Link href='/politics'>
+              <Link href='/Politics'>
                 <a>
                   <p className={styled.NavbarActive__text}>
                     Политика обработки <br /> персональных данных

@@ -69,12 +69,12 @@ const About = () => {
 
   const prevPage = () => {
     setPage(page - 1);
-    console.log('page: ', page);
+    // console.log('page: ', page);
   };
 
   const nextPage = () => {
     setPage(page + 1);
-    console.log('page: ', page);
+    // console.log('page: ', page);
   };
 
   const prevDisable = () => {
@@ -99,9 +99,9 @@ const About = () => {
     return winners;
   };
 
-  React.useEffect(() => {
-    console.log('page: ', page);
-  }, [page]);
+  // React.useEffect(() => {
+  //   console.log('page: ', page);
+  // }, [page]);
 
   return (
     <Layout bg={background.light_beige}>
