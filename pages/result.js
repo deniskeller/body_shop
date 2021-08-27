@@ -10,7 +10,7 @@ import ResultTopRight from '../assets/img/ResultTopRight';
 import ResultCatRed from '../assets/img/ResultCatRed';
 import ResultCatBlue from '../assets/img/ResultCatBlue';
 
-const auth = true;
+const auth = false;
 
 const mockScore = 1400;
 const need_score = 1300;
