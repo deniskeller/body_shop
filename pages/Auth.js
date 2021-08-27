@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import AuthBotLeft from '../assets/img/AuthBotLeft';
 import AuthBotRight from '../assets/img/AuthBotRight';
 import AuthTopLeft from '../assets/img/AuthTopLeft';
@@ -76,7 +77,11 @@ const Auth = () => {
 
         <div className={styles.Policy}>
           Нажимая «Войти», ты соглашаешься <br /> с
-          <span> политикой обработки персональных данных</span>
+          <Link href='/Politics'>
+            <a>
+              <span> политикой обработки персональных данных</span>
+            </a>
+          </Link>
         </div>
 
         {!isConfirm ? (

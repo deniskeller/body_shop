@@ -83,30 +83,6 @@
   left: 0;
 }
 
-.About_social_title {
-  font-weight: 600;
-  font-size: res(18, 18);
-  line-height: 120%;
-  color: $white;
-  margin-bottom: 24px;
-}
-
-.About_social_content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: res(256, 256);
-}
-
-.Social_item {
-  width: res(40, 40);
-  height: res(40, 40);
-  svg {
-    width: 100%;
-    height: 100%;
-  }
-}
-
 .About_winner {
   padding: 48px 0px;
   background: $white;

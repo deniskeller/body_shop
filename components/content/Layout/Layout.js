@@ -27,13 +27,11 @@ const Layout = ({ children, bg, fill }) => {
   }, [bg]);
 
   return (
-    <>
-      <div className={styles.layout} style={{ background: `${bgcolor}` }}>
-        <Navbar fill={fill} />
-        <div>{children}</div>
-        {isCookie && <Cookie handlerCookie={hiddenCookie} />}
-      </div>
-    </>
+    <div className={styles.layout} style={{ background: `${bgcolor}` }}>
+      <Navbar fill={fill} />
+      <div>{children}</div>
+      {isCookie && <Cookie handlerCookie={hiddenCookie} />}
+    </div>
   );
 };
 

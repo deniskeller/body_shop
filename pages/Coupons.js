@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Coupons.module.scss';
-import { BaseSubtitle, BaseTitle, Layout } from '../components';
+import { BaseSubtitle, BaseTitle, Layout, Social } from '../components';
 import CouponsBot from '../assets/img/CouponsBot';
 import CouponsTop from '../assets/img/CouponsTop';
 import Avocado from '../assets/img/Avocado';
@@ -25,7 +25,11 @@ const Coupons = () => {
         className={` ${styles.Coupons} ${promocode == 1 ? styles.default : ''}`}
       >
         {promocode == 1 ? (
-          <div className={styles.Coupons_item}>
+          <div
+            className={` ${styles.Coupons_item} ${
+              promocode == 1 ? styles.Coupons_item_default : ''
+            }`}
+          >
             <Avocado className={styles.Avocado} />
 
             <div className={styles.Coupons_img}></div>
@@ -121,6 +125,8 @@ const Coupons = () => {
             </SwiperSlide>
           </Swiper>
         )}
+        <div className={styles.Coupons_social}></div>
+        <Social color='#004236' />
       </div>
     </Layout>
   );

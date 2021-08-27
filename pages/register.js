@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import {
   BaseButton,
   BaseInput,
@@ -47,7 +48,11 @@ const Register = () => {
         <BaseButton style={{ marginBottom: 8 }} method={() => router.push('/')}>
           Понятно
         </BaseButton>
-        <BaseButton type='clear'>подробнее</BaseButton>
+        <Link href='/About'>
+          <a>
+            <BaseButton type='clear'>подробнее</BaseButton>
+          </a>
+        </Link>
       </BasePopup>
 
       <div className={styles.Register}>
@@ -77,7 +82,11 @@ const Register = () => {
 
         <div className={styles.Policy}>
           Нажимая «Зарегистрироваться», ты соглашаешься <br /> с
-          <span> политикой обработки персональных данных</span>
+          <Link href='/Politics'>
+            <a>
+              <span> политикой обработки персональных данных</span>
+            </a>
+          </Link>
         </div>
       </div>
     </Layout>

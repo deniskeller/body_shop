@@ -12,7 +12,7 @@ import ResultCatBlue from '../assets/img/ResultCatBlue';
 
 const auth = false;
 
-const mockScore = 1100;
+const mockScore = 1400;
 const need_score = 1300;
 
 const Result = () => {
@@ -24,10 +24,10 @@ const Result = () => {
       <ResultTopLeft className={styles.ResultTopLeft} />
       <ResultTopRight className={styles.ResultTopRight} />
 
-      {!auth ? (
-        <ResultCatBlue className={styles.ResultCatBlue} />
-      ) : (
+      {auth ? (
         <ResultCatRed className={styles.ResultCatRed} />
+      ) : (
+        <ResultCatBlue className={styles.ResultCatBlue} />
       )}
 
       <div className={styles.Result}>
@@ -45,7 +45,7 @@ const Result = () => {
 
             {mockScore > need_score ? (
               <BaseSubtitle style={{ marginBottom: 24 }}>
-                Это победа! <br />
+                Это победа! <br /> <br />
                 Ты получаешь скидку 30%.
                 <br />
                 Промо-код отправлен тебе на email.
@@ -56,6 +56,7 @@ const Result = () => {
                   До получения промо-кода <br /> следующего уровня не хватает:
                   <br />
                 </span>
+                <br />
                 105 очков
               </BaseSubtitle>
             )}
@@ -67,7 +68,7 @@ const Result = () => {
         ) : (
           <>
             <BaseTitle
-              style={{ marginBottom: 8, fontSize: 18, lineHeight: '130%' }}
+              style={{ marginBottom: 10, fontSize: 18, lineHeight: '130%' }}
             >
               Поздравляем
               <br />

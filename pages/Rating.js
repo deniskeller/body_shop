@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseTitle, Layout } from '../components';
+import { BaseTitle, Layout, Preloader } from '../components';
 import styles from '../styles/Rating.module.scss';
 import { background, colors } from '../utils/global';
 import hiddenMail from '../utils/hiddenMail';
@@ -122,6 +122,17 @@ const Rating = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   const [error, setError] = React.useState('');
 
+  const [widthRef, setWidthRef] = React.useState(0);
+  const [widthScroll, setWidthScroll] = React.useState(0);
+  const refWrapper = React.useRef();
+
+  React.useEffect(() => {
+    setWidthRef(refWrapper.current.offsetWidth);
+    setWidthScroll(refWrapper.current.clientWidth);
+  }, [refWrapper, widthScroll]);
+
+  let scrollWidth = widthRef - widthScroll;
+
   const fetchUsers = async () => {
     try {
       setIsLoading(true);
@@ -133,18 +144,6 @@ const Rating = () => {
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const computedColor = (index) => {
-    if (index <= 99) return colors.yellow;
-    return colors.white;
-  };
-
-  const computedVisibility = (id) => {
-    if (id === mockId) {
-      return 'block';
-    }
-    return 'none';
   };
 
   React.useEffect(() => {
@@ -166,24 +165,15 @@ const Rating = () => {
 
         {error && <h1>{error}</h1>}
 
-        {isLoading && <p>Loading ...</p>}
+        {isLoading && <Preloader />}
 
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} ref={refWrapper}>
           {users && (
             <ul className={styles.Rating_users}>
-              {mockUsers.map((user, index) => {
+              {mockUsers.slice(0, 100).map((user, index) => {
                 return (
                   <li key={index} className={styles.Rating_user}>
-                    <div
-                      className={styles.Overlay}
-                      style={{ display: computedVisibility(user.user_id) }}
-                    ></div>
-                    <div
-                      style={{ color: computedColor(index) }}
-                      className={styles.Rating_usernumber}
-                    >
-                      {index + 1}
-                    </div>
+                    <div className={styles.Rating_usernumber}>{index + 1}</div>
                     <div className={styles.Rating_usermail}>
                       {hiddenMail(user.user_mail)}
                     </div>
@@ -195,6 +185,16 @@ const Rating = () => {
               })}
             </ul>
           )}
+          <div className={styles.User}>
+            <div
+              className={styles.User_content}
+              style={{ left: -scrollWidth / 2 }}
+            >
+              <div className={styles.User_number}>103</div>
+              <div className={styles.User_text}>твой рейтинг</div>
+              <div className={styles.User_score}>12 30300</div>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

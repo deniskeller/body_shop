@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import AuthTopLeft from '../assets/img/AuthTopLeft';
 import AuthTopRight from '../assets/img/AuthTopRight';
@@ -100,7 +101,12 @@ const Restore = () => {
 
         <div className={styles.Policy}>
           Нажимая «Восстановить пароль», ты соглашаешься
-          <br />с<span> политикой обработки персональных данных</span>
+          <br />с
+          <Link href='/Politics'>
+            <a>
+              <span> политикой обработки персональных данных</span>
+            </a>
+          </Link>
         </div>
       </div>
     </Layout>
