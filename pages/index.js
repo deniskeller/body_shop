@@ -25,7 +25,7 @@ import QrCode from '../assets/img/QrCode';
 import { isMobile } from 'react-device-detect';
 
 export default function Home() {
-  const [auth, setAuth] = React.useState(false);
+  const [auth, setAuth] = React.useState(true);
   const [recordValue, setRecordValue] = React.useState(1300);
 
   const router = useRouter();

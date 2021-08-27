@@ -18,8 +18,7 @@ const Auth = () => {
   const router = useRouter();
   const [data, setData] = React.useState({ email: '', password: '' });
   const [isConfirm, setIsConfirm] = React.useState(true);
-  const [isEmail, setIsEmail] = React.useState(null);
-  const [isPassword, setIsPassword] = React.useState(null);
+  const [isError, setError] = React.useState(false);
 
   const confirm = () => {
     if (testData.email === data.email && testData.password === data.password) {
@@ -27,12 +26,7 @@ const Auth = () => {
       router.push('/');
     } else {
       console.log('Введеные данные не верны');
-      if (testData.email !== data.email) {
-        setIsEmail(true);
-      }
-      if (testData.password !== data.password) {
-        setIsPassword(true);
-      }
+      setError(true);
       setIsConfirm(false);
     }
   };
@@ -55,7 +49,6 @@ const Auth = () => {
           value={data.email}
           onChange={(e) => setData({ ...data, email: e.target.value })}
           style={{ marginBottom: 16 }}
-          isError={isEmail}
         />
 
         <BaseInput
@@ -64,8 +57,13 @@ const Auth = () => {
           onChange={(e) => setData({ ...data, password: e.target.value })}
           type='password'
           style={{ marginBottom: 16 }}
-          isError={isPassword}
         />
+
+        {isError && (
+          <div className={styles.Auth_error}>
+            Почта или пароль введены не верно!
+          </div>
+        )}
 
         <BaseButton
           style={{ width: '100%', marginBottom: 8 }}

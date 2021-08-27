@@ -1,14 +1,7 @@
 import React from 'react';
 import styles from './BaseInput.module.scss';
 
-const BaseInput = ({
-  value,
-  placeholder,
-  onChange,
-  type = 'text',
-  style,
-  isError = false,
-}) => {
+const BaseInput = ({ value, placeholder, onChange, type = 'text', style }) => {
   return (
     <div className={styles.Wrapper}>
       <input
@@ -19,7 +12,6 @@ const BaseInput = ({
         className={styles.Input}
         style={{ ...style }}
       />
-      {isError && <span className={styles.Error}>Неверный {placeholder}</span>}
     </div>
   );
 };

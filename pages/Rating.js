@@ -6,6 +6,7 @@ import hiddenMail from '../utils/hiddenMail';
 import RatingTop from '../assets/img/RatingTop';
 import RatingBottom from '../assets/img/RatingBottom';
 import getAllUsers from '../API/RatingServices';
+import ErrorCat from '../assets/img/ErrorCat';
 
 const mockUsers = [
   { user_id: 15, user_mail: 'keller@gmail.com', user_score: 1300 },
@@ -115,21 +116,22 @@ const mockUsers = [
   { user_id: 15, user_mail: 'dentean@mail.ru', user_score: 1300 },
 ];
 
-const mockId = 7;
-
 const Rating = () => {
   const [users, setUsers] = React.useState([]);
+
   const [isLoading, setIsLoading] = React.useState(false);
-  const [error, setError] = React.useState('');
+  const [error, setError] = React.useState(false);
 
   const [widthRef, setWidthRef] = React.useState(0);
   const [widthScroll, setWidthScroll] = React.useState(0);
   const refWrapper = React.useRef();
 
   React.useEffect(() => {
-    setWidthRef(refWrapper.current.offsetWidth);
-    setWidthScroll(refWrapper.current.clientWidth);
-  }, [refWrapper, widthScroll]);
+    if (users.length > 0) {
+      setWidthRef(refWrapper.current.offsetWidth);
+      setWidthScroll(refWrapper.current.clientWidth);
+    }
+  }, [refWrapper, widthScroll, users.length]);
 
   let scrollWidth = widthRef - widthScroll;
 
@@ -138,9 +140,10 @@ const Rating = () => {
       setIsLoading(true);
       const response = await getAllUsers();
       const data = response.data;
+      console.log('data: ', data);
       setUsers(data);
     } catch (e) {
-      setError('Что-то пошло не так...');
+      setError(true);
     } finally {
       setIsLoading(false);
     }
@@ -158,17 +161,28 @@ const Rating = () => {
       <div className={styles.RatingBottom}>
         <RatingBottom />
       </div>
+
+      {error && <ErrorCat className={styles.ErrorCat} />}
+
       <div className={styles.Rating}>
-        <BaseTitle style={{ color: colors.yellow, marginBottom: 10 }}>
+        <BaseTitle style={{ color: colors.yellow, marginBottom: 15 }}>
           рейтинг
         </BaseTitle>
 
-        {error && <h1>{error}</h1>}
+        {error && (
+          <div className={styles.Rating_error}>
+            Нет данных. <br />
+            <br />
+            Попробуй обновить страницу
+            <br />
+            или вернуться позже.
+          </div>
+        )}
 
         {isLoading && <Preloader />}
 
-        <div className={styles.wrapper} ref={refWrapper}>
-          {users && (
+        {users && users.length > 0 ? (
+          <div className={styles.wrapper} ref={refWrapper}>
             <ul className={styles.Rating_users}>
               {mockUsers.slice(0, 100).map((user, index) => {
                 return (
@@ -184,18 +198,21 @@ const Rating = () => {
                 );
               })}
             </ul>
-          )}
-          <div className={styles.User}>
-            <div
-              className={styles.User_content}
-              style={{ left: -scrollWidth / 2 }}
-            >
-              <div className={styles.User_number}>103</div>
-              <div className={styles.User_text}>твой рейтинг</div>
-              <div className={styles.User_score}>12 30300</div>
+
+            <div className={styles.User}>
+              <div
+                className={styles.User_content}
+                style={{ left: -scrollWidth / 2 }}
+              >
+                <div className={styles.User_number}>103</div>
+                <div className={styles.User_text}>твой рейтинг</div>
+                <div className={styles.User_score}>12 30300</div>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          ''
+        )}
       </div>
     </Layout>
   );

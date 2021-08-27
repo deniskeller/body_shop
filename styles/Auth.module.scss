@@ -46,3 +46,10 @@
     color: $green;
   }
 }
+.Auth_error {
+  font-size: res(10, 12);
+  line-height: 120%;
+  text-transform: uppercase;
+  color: $red;
+  margin-bottom: 20px;
+}
