@@ -10,13 +10,21 @@ import ResultTopRight from '../assets/img/ResultTopRight';
 import ResultCatRed from '../assets/img/ResultCatRed';
 import ResultCatBlue from '../assets/img/ResultCatBlue';
 
-const auth = false;
-
 const mockScore = 1400;
 const need_score = 1300;
 
 const Result = () => {
   const router = useRouter();
+
+  const [auth, setAuth] = React.useState(false);
+
+  React.useEffect(() => {
+    const testEmail = window.localStorage.getItem('email');
+    const testPassword = window.localStorage.getItem('phone');
+    if (testEmail && testPassword) {
+      setAuth(true);
+    }
+  }, []);
 
   return (
     <Layout>

@@ -21,7 +21,10 @@ const Auth = () => {
   const [isError, setError] = React.useState(false);
 
   const confirm = () => {
-    if (testData.email === data.email && testData.password === data.password) {
+    const testEmail = window.localStorage.getItem('email');
+    const testPassword = window.localStorage.getItem('phone');
+
+    if (testEmail === data.email && testPassword === data.password) {
       console.log('Пользователь авторизован');
       router.push('/');
     } else {

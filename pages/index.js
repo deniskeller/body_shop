@@ -30,6 +30,14 @@ export default function Home() {
 
   const router = useRouter();
 
+  React.useEffect(() => {
+    const testEmail = window.localStorage.getItem('email');
+    const testPassword = window.localStorage.getItem('phone');
+    if (testEmail && testPassword) {
+      setAuth(true);
+    }
+  }, []);
+
   return (
     <Layout>
       <Grapefruit className={styles.Grapefruit} />

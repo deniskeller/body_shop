@@ -16,7 +16,7 @@ import NavbarBotLeft from '../../../assets/img/NavbarBotLeft';
 import NavbarBotRight from '../../../assets/img/NavbarBotRight';
 
 const Navbar = ({ fill }) => {
-  const auth = true;
+  const [auth, setAuth] = React.useState(false);
   const router = useRouter();
 
   const links = [
@@ -28,6 +28,19 @@ const Navbar = ({ fill }) => {
   const [burgerActive, setBurgerActive] = React.useState(false);
   const [modal, setModal] = React.useState(false);
 
+  React.useEffect(() => {
+    const testEmail = window.localStorage.getItem('email');
+    const testPassword = window.localStorage.getItem('phone');
+    if (testEmail && testPassword) {
+      setAuth(true);
+    }
+  }, []);
+
+  const logout = () => {
+    localStorage.clear();
+    router.push('/');
+  };
+
   return (
     <>
       <BasePopup visible={modal} setVisible={setModal}>
@@ -37,10 +50,7 @@ const Navbar = ({ fill }) => {
           Ты сможешь вернуться <br /> и продолжить игру <br /> в любой момент
         </BaseSubtitle>
 
-        <BaseButton
-          style={{ marginBottom: 16 }}
-          method={() => router.push('/')}
-        >
+        <BaseButton style={{ marginBottom: 16 }} method={logout}>
           Да
         </BaseButton>
         <BaseButton method={() => setModal(false)} type='clear'>

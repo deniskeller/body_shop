@@ -20,6 +20,12 @@ const Register = () => {
   const [data, setData] = React.useState({ email: '', phone: '' });
   const [modal, setModal] = React.useState(false);
 
+  const register = () => {
+    window.localStorage.setItem('email', data.email);
+    window.localStorage.setItem('phone', data.phone);
+    setModal(true);
+  };
+
   return (
     <Layout>
       <RegisterTopLeft className={styles.RegisterTopLeft} />
@@ -74,7 +80,7 @@ const Register = () => {
 
         <BaseButton
           style={{ width: '100%', marginBottom: 8 }}
-          method={() => setModal(true)}
+          method={register}
           disabled={!data.email || !data.phone}
         >
           зарегистрироваться
