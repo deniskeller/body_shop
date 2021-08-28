@@ -39,6 +39,7 @@ const Navbar = ({ fill }) => {
   const logout = () => {
     localStorage.clear();
     router.push('/');
+    setModal(false);
   };
 
   return (
