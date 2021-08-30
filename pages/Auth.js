@@ -64,7 +64,7 @@ const Auth = () => {
 
         {isError && (
           <div className={styles.Auth_error}>
-            Почта или пароль введены не верно!
+            Почта или пароль введены неверно!
           </div>
         )}
 
